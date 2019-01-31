@@ -15,8 +15,9 @@ def my_split(txt, seps):
 
     return [i.strip() for i in txt.split(default_sep)]
 
+temp = my_split(text, separators)
 
-new_text = list(filter(None, my_split(text, separators)))
+new_text = list(filter(None, temp))
 
 for item in new_text:
     if all(ch.islower() for ch in item):
@@ -29,4 +30,3 @@ for item in new_text:
 print(f"""Lower-case: {', '.join(lower_case)}
 Mixed-case: {', '.join(mixed_case)}
 Upper-case: {', '.join(upper_case)}""")
-
